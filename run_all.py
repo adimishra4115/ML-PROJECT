@@ -9,9 +9,18 @@
 
 import os
 import sys
+
+# Auto-activate local .venv if run with system python
+try:
+    import pandas
+except ImportError:
+    venv_python = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".venv", "bin", "python")
+    if os.path.exists(venv_python) and sys.executable != venv_python:
+        os.execv(venv_python, [venv_python] + sys.argv)
+    raise
+
 import time
 import json
-import pandas as pd
 
 from src.config import (
     BASE_DIR, REPORTS_DIR, FIGURES_DIR, METRICS_PATH, 
