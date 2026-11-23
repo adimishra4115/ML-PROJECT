@@ -1,0 +1,45 @@
+{
+    "project_title": "Cascaded Dermatological Diagnosis & Severity Grading",
+    "stage1_gatekeeper": {
+        "model_architecture": "MobileNetV2 (ImageNet-1K Pretrained)",
+        "classes": [
+            "Eczema",
+            "Melanoma",
+            "Psoriasis"
+        ],
+        "overall_accuracy": 0.9313432835820895,
+        "macro_precision": 0.9319404919830149,
+        "macro_recall": 0.9329421768707483,
+        "macro_f1": 0.9323937778329707,
+        "per_class": {
+            "Eczema": {
+                "precision": 0.9237,
+                "recall": 0.92,
+                "f1_score": 0.9218
+            },
+            "Melanoma": {
+                "precision": 0.94,
+                "recall": 0.9592,
+                "f1_score": 0.9495
+            },
+            "Psoriasis": {
+                "precision": 0.9321,
+                "recall": 0.9196,
+                "f1_score": 0.9258
+            }
+        },
+        "parameters": "3.5 Million",
+        "flops": "300 MFLOPs",
+        "inference_latency_cpu_ms": 32.4,
+        "inference_latency_gpu_ms": 6.1,
+        "best_validation_accuracy": 0.8989,
+        "training_epochs": 10
+    },
+    "stage2_severity": {
+        "model_architecture": "MobileNetV2 (Task-Specific Head)",
+        "num_classes": 17,
+        "best_validation_accuracy": 0.7455,
+        "macro_f1": 0.732,
+        "training_epochs": 10
+    }
+}

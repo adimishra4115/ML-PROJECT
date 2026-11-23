@@ -1,0 +1,5 @@
+Model,Parameters (M),FLOPs,Model Size (.pth),Validation Accuracy,CPU Latency (ms),Overfitting on Small Data,Edge / Mobile Deployment
+MobileNetV2 (Ours),3.5 M,300 MFLOPs,~13.6 MB,89.89%,32 ms,Very Low,Native (Supported)
+ResNet-50,25.6 M,4.1 GFLOPs,~98 MB,90.40%,118 ms,Moderate,Difficult
+VGG-16,138.4 M,15.5 GFLOPs,~528 MB,85.20%,340 ms,Extreme,Infeasible
+Vision Transformer (ViT-B/16),86.6 M,17.5 GFLOPs,~340 MB,88.10%,420 ms,High,Infeasible

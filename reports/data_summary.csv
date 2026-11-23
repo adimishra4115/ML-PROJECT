@@ -1,0 +1,4 @@
+Class,Count,Percentage,Mean_Brightness,Std_Contrast
+Eczema,1250,37.3%,142.2,48.3
+Melanoma,980,29.3%,118.9,61.8
+Psoriasis,1120,33.4%,157.1,42.2

@@ -13,7 +13,10 @@ __pycache__/
 *.py[cod]
 *.pyo
 venv/
+venv
 .venv/
+.venv
+.vscode/
 *.log
 *.tmp
 runs/
